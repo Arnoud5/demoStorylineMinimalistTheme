@@ -5,12 +5,17 @@ import TextBG from "./textBG.svg"
 const PopUp = () => {
     const BukaUndangan = () => {
         const popUp = document.querySelector(".pop-up");
-        popUp.style.display = "none"
+        const landingPage = document.querySelector(".landing-page")
+        popUp.style.display = "none";
+        landingPage.style.display = "block"
+
     }
 
     return (
         <div className="pop-up z-20">
-            <div className="bg-[#EBEDE0] w-full h-full flex flex-col absolute" style={{display: "absolute"}}>
+            <div className="bg-[#EBEDE0] w-full h-full flex flex-col absolute" 
+                style={{display: "absolute"}}
+            >
                 <div className="w-full"
                     style={{
                         backgroundImage: "url(" + TextBG + ")",
