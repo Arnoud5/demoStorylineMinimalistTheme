@@ -10,26 +10,25 @@ import logoSL from "../Component/common/NavbarTop/logo-Storyline.svg"
 import wingDate from "./wing-date.svg"
 import HeroImg from "./Hero-img.svg"
 
-// save the date Page
-import TheDate1 from "./savethedate-1.svg"
-import TheDate2 from "./savethedate-2.svg"
-import Time from "./time.svg"
-import Location from "./location.svg"
-
+// Doa
+import DoaYudha from "./doa-yudha.svg"
+import DoaAnggi from "./doa-anggi.svg"
 
 // Gift Page
 import LogoBca from "./logo-bca.svg"
+
+// Page Modules
+import SaveTheDate from "../Component/Modules/SaveTheDate";
 
 const LandingPage = () => {
     return (
         <div className="max-w-md mx-auto relative">
             {/* popUp */}
             <PopUp />
-            <div className="h-screen bg-[#EBEDE0]" >
+            <div className="h-fit bg-[#EBEDE0]" >
                 <div className="landing-page"
                     style={{ display: "none" }}
                 >
-
                     {/* top Navbar */}
                     <div className="bg-black">
                         <div className="w-11/12 mx-auto flex justify-between items-center py-2">
@@ -76,94 +75,49 @@ const LandingPage = () => {
                     {/* Wedding of Page End */}
 
                     {/* Doa Page */}
-                    {/* Doa Page end*/}
-
-                    {/* Save Date Page */}
-                    <div className="w-full h-fit bg-[#EBEDE0]">
-                        <div className="py-10">
-                            <h2 className="text-3xl font-madeCanvas text-center">SAVE <span className="font-creattionDemo">THE</span> DATE</h2>
-                            <div className="mt-5">
-                                <div className="relative">
-                                    <div className="w-full h-48"
-                                        style=
-                                        {{
-                                            backgroundImage: "url(" + TheDate1 + ")",
-                                            backgroundSize: "contain",
-                                            backgroundRepeat: "no-repeat",
-                                            backgroundPosition: "center"
-                                        }}
-                                    ></div>
-                                    <h3 className="save-date-text-shadow flex justify-center w-full absolute bottom-12 xxs:bottom-8 text-white text-2xl xxs:text-4xl tracking-widest font-madeCanvas">AKAD & RESEPSI</h3>
-                                </div>
-                                <div className="flex flex-col text-center">
-                                    <p className="font-creattionDemo text-3xl leading-loose">Tanggal</p>
-                                    <p className="font-magesta text-4xl">22.09.22</p>
-                                </div>
-                                <div className="flex justify-center font-madeCanvas">
-                                    <table>
-                                        <tr>
-                                            <td className="align-middle">
-                                                <img src={Time} className="block w-3 mx-auto" alt="time icon" />
-                                            </td>
-                                            <td>Akad Nikah</td>
-                                            <td>: 09:00 WIB</td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td>Resepsi</td>
-                                            <td>: 09:00 WIB</td>
-                                        </tr>
-                                        <tr>
-                                            <td><img src={Location} className="w-3 flex justify-center items-center" alt="location icon" /></td>
-                                            <td colspan="2">Desa Penggalang, Adipala, Cilacap</td>
-                                        </tr>
-                                    </table>
-                                </div>
-                                <div className="flex justify-center my-2">
-                                    <button className="px-2 py-1 rounded-full bg-[#D9D9D9] font-madeCanvas text-base font-medium">Lihat Peta</button>
-                                </div>
+                    <div className="w-fit bg-[#EBEDE0]">
+                        <div className="pt-10 pb-16">
+                            <div className="mx-5 py-3">
+                                <h2 className="text-xl text-center font-bold mb-4">
+                                    بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</h2>
+                                <p className="text-center font-madeCanvas text-base">
+                                    Assalamualaikum Warakhmatullahi Wabarakatuhu,  dengan memohon ridho Allah SWT, yang telah menciptakan makhluknya berpasang-pasangan. Kami mohon Do’a restu untuk pernikahan putra-putri kami :
+                                </p>
                             </div>
-
-                            <div className="mt-5">
+                            <div>
+                                {/* Anggi */}
                                 <div className="relative">
-                                    <div className="w-full h-48"
-                                        style=
-                                        {{
-                                            backgroundImage: "url(" + TheDate2 + ")",
-                                            backgroundSize: "contain",
-                                            backgroundRepeat: "no-repeat",
-                                            backgroundPosition: "center"
-                                        }}
-                                    ></div>
-                                    <h3 className="save-date-text-shadow flex justify-center w-full absolute bottom-12 xxs:bottom-8 text-white text-2xl xxs:text-4xl tracking-wide font-madeCanvas">NGUNDUH MANTU</h3>
+                                    <img src={DoaAnggi} alt="Foto Mempelai Wanita Anggi Rafika" />
+                                    <div className="absolute left-2 -bottom-5">
+                                        <h3 className="text-center text-5xl font-creattionDemo">
+                                            Anggi<br />
+                                            <span className="underline underline-offset-8">Rafika</span>
+                                        </h3>
+                                        <p className="text-center text-sm font-madeCanvas">Putri pertama dari<br />
+                                            Bapak Muhtar Mustofa dan Ibu Nangimah
+                                        </p>
+                                    </div>
                                 </div>
-                                <div className="flex flex-col text-center">
-                                    <p className="font-creattionDemo text-3xl leading-loose">Tanggal</p>
-                                    <p className="font-magesta text-4xl">22.09.22</p>
+                                {/* anggi end */}
+                                {/* Yudha */}
+                                <div className="relative flex">
+                                    <img className="ml-auto" src={DoaYudha} alt="Foto mempelai pria Yudha Prabowo" />
+                                    <div className="absolute -bottom-5 right-2">
+                                        <h3 className="text-center text-5xl font-creattionDemo">
+                                            Yudha<br />
+                                            <span className="underline underline-offset-8">Prabowo</span>
+                                        </h3>
+                                        <p className="text-center text-sm font-madeCanvas">Putra pertama dari<br />
+                                            Bapak Subani dan Ibu Dwi Kunarti
+                                        </p>
+                                    </div>
                                 </div>
-                                <div className="flex justify-center font-madeCanvas">
-                                    <table>
-                                        <tr>
-                                            <td className="align-middle">
-                                                <img src={Time} className="block w-3 mx-auto" alt="time icon" />
-                                            </td>
-                                            <td>Pukul 09:00 WIB - Selesai</td>
-                                        </tr>
-                                        <tr>
-                                            <td><img src={Location} className="w-3 flex justify-center items-center" alt="location icon" /></td>
-                                            <td>Desa Krikil, Pageruyung, Kendal</td>
-                                        </tr>
-                                    </table>
-                                </div>
-                                <div className="flex justify-center my-2">
-                                    <button className="px-2 py-1 rounded-full bg-[#D9D9D9] font-madeCanvas text-base font-medium">Lihat Peta</button>
-                                </div>
+                                {/* yudha end */}
                             </div>
-
                         </div>
                     </div>
-                    {/* Save Date Page end*/}
-
+                    {/* Doa Page end*/}
+                    <SaveTheDate />
                     {/* Ucapan dan RSVP Page */}
                     {/* Ucapan dan RSVP Page End*/}
 
