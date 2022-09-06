@@ -13,8 +13,8 @@ const PopUp = () => {
 
     return (
         <div className="pop-up z-20">
-            <div className="bg-[#EBEDE0] w-full h-full flex flex-col absolute" 
-                style={{display: "absolute"}}
+            <div className="bg-[#EBEDE0] w-full h-screen flex flex-col absolute"
+                style={{ display: "absolute" }}
             >
                 <div className="w-full"
                     style={{
@@ -35,16 +35,18 @@ const PopUp = () => {
                     }}>
                 </div>
             </div>
-            <div className="absolute w-11/12 h-auto text-right top-1/3 font-madeCanvas">
-                <h1 className="text-[50px] font-light leading-[90px]">
-                    Anggi<br />& Yudha
-                </h1>
-                <h2 className="text-[20px] my-2 leading-7 font-medium">
-                    Kepada YTH:<br />
-                    <span className="underline underline-offset-4">OLIVER</span><br />
-                    (DITEMPAT)
-                </h2>
-                <button onClick={BukaUndangan} className="button-buka-undangan text-[12px] font-black px-3 py-1 text-white rounded-full bg-[#AFABAB]">BUKA UNDANGAN</button>
+            <div className="absolute w-11/12 h-fit text-right top-0 font-madeCanvas">
+                <div className="w-full h-screen flex flex-col justify-center items-end">
+                    <h1 className="text-[50px] font-light leading-[90px]">
+                        Anggi<br />& Yudha
+                    </h1>
+                    <h2 className="text-[20px] my-2 leading-7 font-medium">
+                        Kepada YTH:<br />
+                        <span className="underline underline-offset-4">OLIVER</span><br />
+                        (DITEMPAT)
+                    </h2>
+                    <button onClick={BukaUndangan} className="button-buka-undangan text-[12px] font-black px-3 py-1 text-white rounded-full bg-[#AFABAB]">BUKA UNDANGAN</button>
+                </div>
             </div>
         </div>
     )
