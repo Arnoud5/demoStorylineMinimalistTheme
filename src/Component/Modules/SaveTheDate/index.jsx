@@ -1,10 +1,10 @@
 import React from "react";
 
 // Assets
-import TheDate1 from "./savethedate-1.svg"
-import TheDate2 from "./savethedate-2.svg"
-import Time from "./time.svg"
-import Location from "./location.svg"
+import TheDate1 from "./Assets/savethedate-1.png"
+import TheDate2 from "./Assets/savethedate-2.png"
+import Time from "./Assets/time.svg"
+import Location from "./Assets/location.svg"
 
 const SaveTheDate = () => {
     return (

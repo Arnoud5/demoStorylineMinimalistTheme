@@ -1,5 +1,5 @@
 import React from "react";
-import LeafBG from "./pngwing.svg"
+import LeafBG from "./pngwing.png"
 import TextBG from "./textBG.svg"
 
 const PopUp = () => {
