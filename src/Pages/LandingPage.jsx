@@ -19,42 +19,43 @@ import Hapiness from "./hapiness.mp3"
 import { useState } from "react";
 
 const LandingPage = () => {
+    const [openMsg, setOpenMsg] = useState(true)
 
     useEffect(() => {
         Aos.init();
         Aos.refresh();
     }, [])
 
-    const renderAudio = () => {
-        return (
-            <ReactAudioPlayer
-                src={Hapiness}
-                autoPlay={true}
-            />
-        )
-    }
-
     return (
         <div className="max-w-md mx-auto relative">
-            <ReactAudioPlayer
-                src={Hapiness}
-                autoPlay={true}
-            />
-            {/* popUp */}
-            <PopUp />
-            <div className="h-fit bg-[#EBEDE0]" >
-                <div className="landing-page"
-                >
-                    <NavbarTop />
-                    <WeddingOf />
-                    <Doa />
-                    <SaveTheDate />
-                    <Rsvp />                    
-                    <Galery />
-                    <Gift />
-                </div>
-            </div>
-            <NavbarBottom />
+            {
+                openMsg && (
+                    <PopUp setOpenmsg={setOpenMsg} />
+                )
+            }
+            {
+                !openMsg && (
+                    <>
+                        <ReactAudioPlayer
+                            src={Hapiness}
+                            autoPlay={true}
+                        />
+                        <div className="h-fit bg-[#EBEDE0]" >
+                            <div className="landing-page">
+                                <NavbarTop />
+                                <WeddingOf />
+                                <Doa />
+                                <SaveTheDate />
+                                <Rsvp />
+                                <Galery />
+                                <Gift />
+                            </div>
+                        </div>
+                        <NavbarBottom />
+                    </>
+                )
+            }
+
         </div>
     )
 }

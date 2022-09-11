@@ -16,7 +16,12 @@ const WeddingOf = () => {
                 className=" w-10/12 mx-auto hero-img flex justify-center items-end font-madeCanvas text-3xl leading-8 font-medium text-center"
             >
                 <p className="hero-img-text-shadow">A<br />N<br />G<br />G<br />I</p>
-                <div className="w-4/5 h-auto xxs:w-auto" data-aos="fade-down">
+                <div className="w-4/5 h-auto xxs:w-auto"
+                    data-aos="fade-down"
+
+                    data-aos-delay="200"
+                    data-aos-duration="10000"
+                >
                     <img className="w-full" src={HeroImg} alt="foto Anggi dan Yudha" />
                 </div>
                 <p className="hero-img-text-shadow">Y<br />U<br />D<br />H<br />A</p>

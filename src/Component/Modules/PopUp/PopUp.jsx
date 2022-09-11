@@ -4,14 +4,11 @@ import TextBG from "./textBG.svg"
 
 import { Link } from "react-scroll";
 
-const PopUp = () => {
-    // const BukaUndangan = () => {
-    //     const popUp = document.querySelector(".pop-up");
-    //     const landingPage = document.querySelector(".landing-page")
-    //     popUp.style.display = "none";
-    //     landingPage.style.display = "block"
+const PopUp = ({setOpenmsg}) => {
 
-    // }
+    const handleOpenMessage= () => {
+        return setOpenmsg(false)
+    }
 
     return (
         <div className="pop-up z-20 w-full h-screen">
@@ -49,7 +46,7 @@ const PopUp = () => {
                     </h2>
                     <Link to="weddingof" offset={-60} smooth={true} spy={true}>
                         <button
-                            // onClick={BukaUndangan}
+                            onClick={handleOpenMessage}
                             className="button-buka-undangan text-[12px] font-black px-3 py-1 text-white rounded-full bg-[#AFABAB]">BUKA UNDANGAN</button>
                     </Link>
                 </div>
