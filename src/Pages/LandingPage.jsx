@@ -37,7 +37,7 @@ const LandingPage = () => {
                     <SaveTheDate />
                     {/* Ucapan dan RSVP Page */}
                     <div className="w-full bg-[#EBEDE0]"
-                    id="rsvp"
+                        id="rsvp"
                         data-aos="zoom-in"
                         data-aos-offset="10"
                         data-aos-easing="ease-in-out"
@@ -101,10 +101,10 @@ const LandingPage = () => {
                     {/* Galery Page */}
                     {/* Galery Page End */}
                     <Gift />
-                    <NavbarBottom />
 
                     {/* Bottom Navbar */}
                 </div>
+                <NavbarBottom />
             </div>
         </div>
     )
