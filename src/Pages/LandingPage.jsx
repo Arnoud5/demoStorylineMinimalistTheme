@@ -1,4 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
+
+// aos motion library
+import Aos from "aos";
+import "aos/dist/aos.css"
 
 import RsvpBg from "./bg-rsvp.png"
 
@@ -9,15 +13,23 @@ import WeddingOf from "../Component/Modules/WeddingOf";
 import SaveTheDate from "../Component/Modules/SaveTheDate";
 import Gift from "../Component/Modules/Gift";
 import Doa from "../Component/Modules/Doa";
+import NavbarBottom from "../Component/common/NavbarBottom/NavbarBottom";
 
 const LandingPage = () => {
+
+    useEffect(() => {
+        Aos.init({
+            once: false,
+        });
+        Aos.refresh();
+    }, [])
+
     return (
         <div className="max-w-md mx-auto relative">
             {/* popUp */}
             <PopUp />
             <div className="h-fit bg-[#EBEDE0]" >
                 <div className="landing-page"
-                    style={{ display: "none" }}
                 >
                     <NavbarTop />
                     <WeddingOf />
@@ -25,6 +37,10 @@ const LandingPage = () => {
                     <SaveTheDate />
                     {/* Ucapan dan RSVP Page */}
                     <div className="w-full bg-[#EBEDE0]"
+                    id="rsvp"
+                        data-aos="zoom-in"
+                        data-aos-offset="10"
+                        data-aos-easing="ease-in-out"
                         style=
                         {{
                             backgroundImage: `url(${RsvpBg})`,
@@ -65,7 +81,11 @@ const LandingPage = () => {
                         </div>
                     </div>
                     {/* Ucapan dan RSVP Page End*/}
-                    <div className="w-full bg-[#EBEDE0]">
+                    <div className="w-full bg-[#EBEDE0]"
+                        data-aos="fade-down"
+                        data-aos-offset="10"
+                        data-aos-easing="ease-in-out"
+                    >
                         <div className="text-center">
                             <h2 className="text-2xl font-madeCanvas">
                                 Gallery Of<br />
@@ -81,6 +101,8 @@ const LandingPage = () => {
                     {/* Galery Page */}
                     {/* Galery Page End */}
                     <Gift />
+                    <NavbarBottom />
+
                     {/* Bottom Navbar */}
                 </div>
             </div>

@@ -8,10 +8,22 @@ import Location from "./Assets/location.svg"
 
 const SaveTheDate = () => {
     return (
-        <div className="w-full h-fit bg-[#EBEDE0]">
+        <div className="w-full h-fit bg-[#EBEDE0]"
+            id="savethedate"
+        >
             <div className="py-10">
-                <h2 className="text-3xl font-madeCanvas text-center">SAVE <span className="font-creattionDemo">THE</span> DATE</h2>
-                <div className="mt-5">
+                <h2 className="text-3xl font-madeCanvas text-center"
+                    data-aos="fade-down"
+                    data-aos-offset="10"
+                    data-aos-easing="ease-in-out"
+                >
+                    SAVE <span className="font-creattionDemo">THE</span> DATE
+                </h2>
+                <div className="mt-5"
+                    data-aos="fade-right"
+                    data-aos-offset="10"
+                    data-aos-easing="ease-in-out"
+                >
                     <div className="relative">
                         <div className="w-full h-48"
                             style=
@@ -53,7 +65,11 @@ const SaveTheDate = () => {
                     </div>
                 </div>
 
-                <div className="mt-5">
+                <div className="mt-5"
+                    data-aos="fade-left"
+                    data-aos-offset="10"
+                    data-aos-easing="ease-in-out"
+                >
                     <div className="relative">
                         <div className="w-full h-48"
                             style=

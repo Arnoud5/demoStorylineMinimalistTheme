@@ -1,10 +1,14 @@
-import React from "react";
+import Aos from "aos";
+import React, { useEffect } from "react";
 
 import bgDoa from "./Assets/bgDoa.png"
 import fotoAnggi from "./Assets/doa-anggi.png"
 import fotoYudha from "./Assets/doa-yudha.png"
 
 const Doa = () => {
+    useEffect(()=>{
+        Aos.init();
+    },[])
     return (
         <div className="w-fit bg-[#EBEDE0] overflow-hidden relative"
             style={{
@@ -15,16 +19,24 @@ const Doa = () => {
             }}
         >
             <div className="pt-10 pb-16">
-                <div className="mx-5 py-3">
+                <div className="mx-5 py-3"
+                    data-aos="fade-down"
+                    data-aos-offset="10"
+                    data-aos-easing="ease-in-out"
+                >
                     <h2 className="text-xl text-center font-bold mb-4">
                         بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</h2>
                     <p className="text-center font-madeCanvas text-base">
                         Assalamualaikum Warakhmatullahi Wabarakatuhu,  dengan memohon ridho Allah SWT, yang telah menciptakan makhluknya berpasang-pasangan. Kami mohon Do’a restu untuk pernikahan putra-putri kami :
                     </p>
                 </div>
-                <div className="">
+                <div>
                     {/* Anggi */}
-                    <div className="relative">
+                    <div className="relative"
+                        data-aos="fade-up"
+                        data-aos-offset="10"
+                        data-aos-easing="ease-in-out"
+                    >
                         <img className="-rotate-6 -ml-3" src={fotoAnggi} alt="Foto Mempelai Wanita Anggi Rafika" />
                         <div className="absolute left-2 -bottom-5">
                             <h3 className="text-center text-5xl font-creattionDemo">
@@ -38,7 +50,11 @@ const Doa = () => {
                     </div>
                     {/* anggi end */}
                     {/* Yudha */}
-                    <div className="relative flex justify-end pt-10">
+                    <div className="relative flex justify-end pt-10"
+                        data-aos="fade-up"
+                        data-aos-offset="10"
+                        data-aos-easing="ease-in-out"
+                    >
                         <img className="-mr-3 rotate-6" src={fotoYudha} alt="Foto mempelai pria Yudha Prabowo" />
                         <div className="absolute -bottom-5 right-2">
                             <h3 className="text-center text-5xl font-creattionDemo">

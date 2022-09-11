@@ -6,6 +6,11 @@ import BgGift from "./bggift.png"
 const Gift = () => {
     return (
         <div className="h-auto bg-[#EBEDE0] py-24"
+            data-aos="zoom-in-down"
+            data-aos-offset="10"
+            data-aos-easing="ease-in-out"
+            data-aos-delay="400"
+            id="gift"
             style={{
                 backgroundImage: `url(${BgGift})`,
                 backgroundSize: "cover",
