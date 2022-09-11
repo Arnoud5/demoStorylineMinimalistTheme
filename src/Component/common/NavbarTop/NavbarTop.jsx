@@ -15,7 +15,7 @@ const NavbarTop = () => {
                 <div className="absolute w-full flex justify-center">
                     <img src={LogoSL} alt="logo Stooryline" />
                 </div>
-                <Link to="rsvp" smooth="true">
+                <Link to="rsvp" smooth={true} spy={true}>
                     <div className="flex justify-center items-center">
                         <p className="text-white font-madeCanvas font-semibold">RSVP</p>
                         <img className="w-7" src={LogoRSVP} alt="rsvp logo" />
