@@ -42,22 +42,25 @@ const SaveTheDate = () => {
                     </div>
                     <div className="flex justify-center font-madeCanvas">
                         <table>
-                            <tr>
-                                <td className="align-middle">
-                                    <img src={Time} className="block w-3 mx-auto" alt="time icon" />
-                                </td>
-                                <td>Akad Nikah</td>
-                                <td>: 09:00 WIB</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Resepsi</td>
-                                <td>: 09:00 WIB</td>
-                            </tr>
-                            <tr>
-                                <td><img src={Location} className="w-3 flex justify-center items-center" alt="location icon" /></td>
-                                <td colspan="2">Desa Penggalang, Adipala, Cilacap</td>
-                            </tr>
+                            <tbody>
+
+                                <tr>
+                                    <td className="align-middle">
+                                        <img src={Time} className="block w-3 mx-auto" alt="time icon" />
+                                    </td>
+                                    <td>Akad Nikah</td>
+                                    <td>: 09:00 WIB</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Resepsi</td>
+                                    <td>: 09:00 WIB</td>
+                                </tr>
+                                <tr>
+                                    <td><img src={Location} className="w-3 flex justify-center items-center" alt="location icon" /></td>
+                                    <td colSpan="2">Desa Penggalang, Adipala, Cilacap</td>
+                                </tr>
+                            </tbody>
                         </table>
                     </div>
                     <div className="flex justify-center my-2">
@@ -88,16 +91,18 @@ const SaveTheDate = () => {
                     </div>
                     <div className="flex justify-center font-madeCanvas">
                         <table>
-                            <tr>
-                                <td className="align-middle">
-                                    <img src={Time} className="block w-3 mx-auto" alt="time icon" />
-                                </td>
-                                <td>Pukul 09:00 WIB - Selesai</td>
-                            </tr>
-                            <tr>
-                                <td><img src={Location} className="w-3 flex justify-center items-center" alt="location icon" /></td>
-                                <td>Desa Krikil, Pageruyung, Kendal</td>
-                            </tr>
+                            <tbody>
+                                <tr>
+                                    <td className="align-middle">
+                                        <img src={Time} className="block w-3 mx-auto" alt="time icon" />
+                                    </td>
+                                    <td>Pukul 09:00 WIB - Selesai</td>
+                                </tr>
+                                <tr>
+                                    <td><img src={Location} className="w-3 flex justify-center items-center" alt="location icon" /></td>
+                                    <td>Desa Krikil, Pageruyung, Kendal</td>
+                                </tr>
+                            </tbody>
                         </table>
                     </div>
                     <div className="flex justify-center my-2">

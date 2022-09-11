@@ -3,8 +3,8 @@ import { Icon } from "@iconify/react";
 import { Link } from "react-scroll";
 
 
-import MusicWedding from "./song-happiness.ogg"
-import ReactAudioPlayer from 'react-audio-player'
+// import MusicWedding from "./song-happiness.ogg"
+// import ReactAudioPlayer from 'react-audio-player'
 
 
 const NavbarBottom = () => {
@@ -13,10 +13,10 @@ const NavbarBottom = () => {
     }
     return (
         <div className="bg-black flex max-w-md w-full fixed  bottom-0 p-2 justify-evenly items-center z-10">
-            <ReactAudioPlayer
+            {/* <ReactAudioPlayer
                 src={MusicWedding}
                 autoPlay
-            />
+            /> */}
             <Link activeClass="active" to="weddingof" offset={-60} smooth={true} spy={true}>
                 <Icon className="w-7 h-auto" icon="ant-design:home-filled" color="white" />
             </Link>
