@@ -18,9 +18,7 @@ import NavbarBottom from "../Component/common/NavbarBottom/NavbarBottom";
 const LandingPage = () => {
 
     useEffect(() => {
-        Aos.init({
-            once: false,
-        });
+        Aos.init();
         Aos.refresh();
     }, [])
 
@@ -37,10 +35,6 @@ const LandingPage = () => {
                     <SaveTheDate />
                     {/* Ucapan dan RSVP Page */}
                     <div className="w-full bg-[#EBEDE0]"
-                        id="rsvp"
-                        data-aos="zoom-in"
-                        data-aos-offset="10"
-                        data-aos-easing="ease-in-out"
                         style=
                         {{
                             backgroundImage: `url(${RsvpBg})`,
@@ -49,22 +43,32 @@ const LandingPage = () => {
                             backgroundPosition: "top center"
                         }}
                     >
-                        <div className="text-center">
+                        <div className="text-center"
+                            id="rsvp"
+                            data-aos="zoom-in"
+                            data-aos-offset="300"
+                            data-aos-easing="ease-in-out"
+                        >
                             <h2 className="text-2xl font-madeCanvas">
                                 UCAPAN & RSVP
                             </h2>
                         </div>
-                        <div className="flex flex-col font-madeCanvas text-base">
+                        <div className="flex flex-col font-madeCanvas text-base"
+                            id="rsvp"
+                            data-aos="zoom-in"
+                            data-aos-offset="300"
+                            data-aos-easing="ease-in-out"
+                        >
                             <div className="flex flex-col w-10/12 mx-auto">
                                 <label htmlFor="kepada">Kepada:</label>
                                 <input
-                                    className="focus:outline-none focus:ring focus:ring-[#AFABAB] focus:text-[#858282] active:text-[#AFABAB] bg-[#D9D9D9] text-[#EBEDE0] rounded-full px-3 font-semibold"
+                                    className="focus:outline-none focus:ring focus:ring-[#AFABAB] focus:text-[#858282] active:text-[#AFABAB] bg-[#D9D9D9] text-[#AFABAB] rounded-full px-3 font-semibold"
                                     id="kepada" type="text" placeholder="&#x2022; &#x2022; &#x2022; &#x2022;"
                                 />
                                 <label htmlFor="ucapan">Ucapan:</label>
-                                <input
-                                    className="focus:outline-none focus:ring focus:ring-[#AFABAB] focus:text-[#858282] active:text-[#AFABAB] bg-[#D9D9D9] text-[#EBEDE0] rounded-full px-3 font-semibold"
-                                    id="ucapan" type="text" placeholder="&#x2022; &#x2022; &#x2022; &#x2022;"
+                                <textarea
+                                    className="h-24 focus:outline-none focus:ring focus:ring-[#AFABAB] focus:text-[#858282] active:text-[#AFABAB] bg-[#D9D9D9] text-[#AFABAB] rounded-xl px-3 font-semibold"
+                                    id="ucapan" cols="50" placeholder="&#x2022; &#x2022; &#x2022; &#x2022;"
                                 />
                                 <label htmlFor="kehadiran">Kehadiran:</label>
                                 <input
@@ -83,7 +87,7 @@ const LandingPage = () => {
                     {/* Ucapan dan RSVP Page End*/}
                     <div className="w-full bg-[#EBEDE0]"
                         data-aos="fade-down"
-                        data-aos-offset="10"
+                        data-aos-offset="300"
                         data-aos-easing="ease-in-out"
                     >
                         <div className="text-center">
@@ -104,8 +108,9 @@ const LandingPage = () => {
 
                     {/* Bottom Navbar */}
                 </div>
-                <NavbarBottom />
             </div>
+            <NavbarBottom />
+            {/* <NavbarBottom /> */}
         </div>
     )
 }

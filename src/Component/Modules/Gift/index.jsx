@@ -4,12 +4,12 @@ import LogoBca from "./logo-bca.png"
 import BgGift from "./bggift.png"
 
 const Gift = () => {
+
+    const copyREK = () => {
+        navigator.clipboard.writeText(2521389658)
+    }
     return (
         <div className="h-auto bg-[#EBEDE0] py-24"
-            data-aos="zoom-in-down"
-            data-aos-offset="10"
-            data-aos-easing="ease-in-out"
-            data-aos-delay="400"
             id="gift"
             style={{
                 backgroundImage: `url(${BgGift})`,
@@ -20,6 +20,10 @@ const Gift = () => {
         >
             <div className="h-fit py-14 px-5 w-11/12 mx-auto bg-[#D9D9D9] text-center rounded-xl font-madeCanvas"
                 style={{ backgroundColor: "rgba(217, 217, 217, 0.7)" }}
+                data-aos="zoom-in-down"
+                data-aos-offset="0"
+                data-aos-easing="ease-in-out"
+                data-aos-delay="300"
             >
                 <h2 className="font-creattionDemo font-normal text-4xl mb-4">Gift</h2>
                 <p className="font-medium">Do’a restu anda merupakan karunia yang sangat berarti bagi kami. Tanpa mengurangi rasa hormat, dan untuk melengkapi kebahagiaan pengantin anda dapat memberi tanda kasih disini :</p>
@@ -29,12 +33,16 @@ const Gift = () => {
                 >
                     <div className="m-4 flex flex-col font-magesta text-base">
                         <img className="w-16 xss:w-24 h-auto self-end" src={LogoBca} alt="logo BCA" />
-                        <p className="self-start">
-                            2521389658
-                            <span className="text-[#0038FF]">
-                                (Copy)
-                            </span>
-                        </p>
+                        <div className="flex justify-start items-center">
+                            <p className="">
+                                2521389658
+                            </p>
+                            <button onClick={copyREK}
+                                className="pt-2 p-1 ml-2 text-[#0038FF] active:bg-black focus:bg-black active:text-white focus:text-white select-none rounded-xl
+                            ">
+                                ( Copy )
+                            </button>
+                        </div>
                         <p className="self-start">a.n : Yudha Prabowo</p>
                     </div>
                 </div>

@@ -6,11 +6,12 @@ import fotoAnggi from "./Assets/doa-anggi.png"
 import fotoYudha from "./Assets/doa-yudha.png"
 
 const Doa = () => {
-    useEffect(()=>{
+    useEffect(() => {
         Aos.init();
-    },[])
+    }, [])
     return (
         <div className="w-fit bg-[#EBEDE0] overflow-hidden relative"
+
             style={{
                 backgroundImage: `url(${bgDoa})`,
                 backgroundSize: "cover",
@@ -18,10 +19,12 @@ const Doa = () => {
                 backgroundPosition: "center "
             }}
         >
-            <div className="pt-10 pb-16">
+            <div className="pt-10 pb-16"
+                id="doa"
+            >
                 <div className="mx-5 py-3"
                     data-aos="fade-down"
-                    data-aos-offset="10"
+                    data-aos-offset="300"
                     data-aos-easing="ease-in-out"
                 >
                     <h2 className="text-xl text-center font-bold mb-4">
@@ -34,7 +37,7 @@ const Doa = () => {
                     {/* Anggi */}
                     <div className="relative"
                         data-aos="fade-up"
-                        data-aos-offset="10"
+                        data-aos-offset="300"
                         data-aos-easing="ease-in-out"
                     >
                         <img className="-rotate-6 -ml-3" src={fotoAnggi} alt="Foto Mempelai Wanita Anggi Rafika" />
@@ -52,7 +55,7 @@ const Doa = () => {
                     {/* Yudha */}
                     <div className="relative flex justify-end pt-10"
                         data-aos="fade-up"
-                        data-aos-offset="10"
+                        data-aos-offset="300"
                         data-aos-easing="ease-in-out"
                     >
                         <img className="-mr-3 rotate-6" src={fotoYudha} alt="Foto mempelai pria Yudha Prabowo" />

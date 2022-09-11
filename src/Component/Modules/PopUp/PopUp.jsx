@@ -47,7 +47,7 @@ const PopUp = () => {
                         <span className="underline underline-offset-4">OLIVER</span><br />
                         (DITEMPAT)
                     </h2>
-                    <Link to="WeddingOf" smooth="true">
+                    <Link to="weddingof" offset={-60} smooth={true} spy={true}>
                         <button
                             // onClick={BukaUndangan}
                             className="button-buka-undangan text-[12px] font-black px-3 py-1 text-white rounded-full bg-[#AFABAB]">BUKA UNDANGAN</button>

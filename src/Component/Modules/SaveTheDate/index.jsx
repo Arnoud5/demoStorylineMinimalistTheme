@@ -14,14 +14,14 @@ const SaveTheDate = () => {
             <div className="py-10">
                 <h2 className="text-3xl font-madeCanvas text-center"
                     data-aos="fade-down"
-                    data-aos-offset="10"
+                    data-aos-offset="200"
                     data-aos-easing="ease-in-out"
                 >
                     SAVE <span className="font-creattionDemo">THE</span> DATE
                 </h2>
                 <div className="mt-5"
-                    data-aos="fade-right"
-                    data-aos-offset="10"
+                    data-aos="fade-up"
+                    data-aos-offset="200"
                     data-aos-easing="ease-in-out"
                 >
                     <div className="relative">
@@ -66,8 +66,8 @@ const SaveTheDate = () => {
                 </div>
 
                 <div className="mt-5"
-                    data-aos="fade-left"
-                    data-aos-offset="10"
+                    data-aos="fade-up"
+                    data-aos-offset="200"
                     data-aos-easing="ease-in-out"
                 >
                     <div className="relative">

@@ -7,9 +7,7 @@ import LogoRSVP from "../NavbarTop/logo-rsvp.svg"
 
 const NavbarTop = () => {
     return (
-        <div className="bg-black sticky top-0 z-10"
-            id="WeddingOf"
-        >
+        <div className="bg-black sticky top-0 z-10">
             <div className="w-11/12 mx-auto flex justify-between items-center py-2 relative">
                 <div>
                     <img className="w-9" src={LogoAY} alt="logo Anggi dan Yudha" />
