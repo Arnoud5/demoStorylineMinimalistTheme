@@ -10,6 +10,15 @@ import Img5 from "./Img5.png"
 import Img6 from "./Img6.png"
 
 const Galery = () => {
+    const images = [
+        { id: 1, img: Img1 },
+        { id: 2, img: Img2 },
+        { id: 3, img: Img3 },
+        { id: 4, img: Img4 },
+        { id: 5, img: Img5 },
+        { id: 6, img: Img6 }
+    ]
+
     return (
         <div className="w-full bg-[#EBEDE0]"
             data-aos="fade-down"
@@ -36,25 +45,24 @@ const Galery = () => {
                     totalSlides={6}
                 >
                     <Slider>
-                        <Slide index={0}>
-                            
-                            <img className="mx-auto my-auto h- w-auto" src={Img1} alt="" />
-                        </Slide>
-                        <Slide index={1}>
-                            <img className="mx-auto my-auto h-full" src={Img2} alt="" />
-                        </Slide>
-                        <Slide index={2}>
-                            <img className="mx-auto my-auto h-full" src={Img3} alt="" />
-                        </Slide>
-                        <Slide index={3}>
-                            <img className="mx-auto my-auto h-full" src={Img4} alt="" />
-                        </Slide>
-                        <Slide index={4}>
-                            <img className="mx-auto my-auto h-full" src={Img5} alt="" />
-                        </Slide>
-                        <Slide index={5}>
-                            <img className="mx-auto my-auto h-full" src={Img6} alt="" />
-                        </Slide>
+                        {
+                            images?.map((item) => (
+                                <Slide key={item.id} index={item.id}>
+
+                                    <img className="w-11/12 mx-auto h-full object-cover" src={item.img} alt={item.img} loading="lazy" />
+                                    {/* <div className="w-11/12 mx-auto h-full rounded-3xl"
+                                        style=
+                                        {{
+                                            backgroundImage: "url(" + item.img + ")",
+                                            backgroundSize: "cover",
+                                            backgroundRepeat: "no-repeat",
+                                            backgroundPosition: "center"
+                                        }}
+                                    ></div> */}
+                                </Slide>
+                            ))
+                        }
+
                     </Slider>
                 </CarouselProvider>
             </div>

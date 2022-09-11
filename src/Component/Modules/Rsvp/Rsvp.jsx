@@ -17,7 +17,7 @@ const Rsvp = () => {
             <div className="text-center"
                 id="rsvp"
                 data-aos="zoom-in"
-                data-aos-offset="300"
+                data-aos-offset="10"
                 data-aos-easing="ease-in-out"
             >
                 <h2 className="text-2xl font-madeCanvas">
@@ -30,7 +30,7 @@ const Rsvp = () => {
             >
                 <div
                     data-aos="zoom-in"
-                    data-aos-offset="300"
+                    data-aos-offset="10"
                     data-aos-easing="ease-in-out"
                 >
 
@@ -64,7 +64,7 @@ const Rsvp = () => {
             >
                 <CarouselProvider
                     naturalSlideWidth={50}
-                    naturalSlideHeight={30}
+                    naturalSlideHeight={50}
                     totalSlides={3}
                 >
                     <Slider>
@@ -74,7 +74,7 @@ const Rsvp = () => {
                                     <p className="font-bold">Oliver</p>
                                     <p className="ml-1">(Hadir)</p>
                                 </div>
-                                <p className="text-elipsis">Nec ipsum, vestibulum non lectus. Viverra lorem sed feugiat ut aliquam morbi eu sapien, odio. Vitae turpis ultrices mauris in congue erat habitant sem duis.
+                                <p className="truncate h-16">Nec ipsum, vestibulum non lectus. Viverra lorem sed feugiat ut aliquam morbi eu sapien, odio. Vitae turpis ultrices mauris in congue erat habitant sem duis.
                                     Nec ipsum, vestibulum non lectus. Viverra lorem sed feugiat ut aliquam morbi eu sapien, odio. Vitae turpis ultrices mauris in congue erat habitant sem duis
                                 </p>
                             </div>
@@ -85,7 +85,7 @@ const Rsvp = () => {
                                     <p className="font-bold">Oliver</p>
                                     <p className="ml-1">(Hadir)</p>
                                 </div>
-                                <p>Nec ipsum, vestibulum non lectus. Viverra lorem sed feugiat ut aliquam morbi eu sapien, odio. Vitae turpis ultrices mauris in congue erat habitant sem duis.</p>
+                                <p className="truncate h-16">Nec ipsum, vestibulum non lectus. Viverra lorem sed feugiat ut aliquam morbi eu sapien, odio. Vitae turpis ultrices mauris in congue erat habitant sem duis.</p>
                             </div>
                         </Slide>
                         <Slide index={2}>
@@ -94,7 +94,7 @@ const Rsvp = () => {
                                     <p className="font-bold">Oliver</p>
                                     <p className="ml-1">(Hadir)</p>
                                 </div>
-                                <p>Nec ipsum, vestibulum non lectus. Viverra lorem sed feugiat ut aliquam morbi eu sapien, odio. Vitae turpis ultrices mauris in congue erat habitant sem duis.</p>
+                                <p className="truncate h-16">Nec ipsum, vestibulum non lectus. Viverra lorem sed feugiat ut aliquam morbi eu sapien, odio. Vitae turpis ultrices mauris in congue erat habitant sem duis.</p>
                             </div>
                         </Slide>
                     </Slider>
