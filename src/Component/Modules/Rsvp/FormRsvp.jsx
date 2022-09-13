@@ -71,14 +71,35 @@ const FormRsvp = () => {
     }
 
   }, [errorFormHandle, errorRequest])
-
+  console.log(form)
   return (
-    <div className="flex flex-col font-madeCanvas text-base" id="rsvp">
-      {loader && <LoaderRing />}
+    <div className="relative flex flex-col font-madeCanvas text-base" id="rsvp">
+      {loader && (
+        <div className="absolute left-0 right-0 z-10">
+          <div className="p-12 m-12 absolute translate-x-1/2">
+            <LoaderRing />
+          </div>
+        </div>
+      )
+      }
 
-      {errorFormHandle && <ErrorMessage message="Harap diisi semuanya" />}
+      {errorFormHandle && (
+        <div className="absolute left-0 right-0 z-10">
+          <div className="p-12 m-12 absolute translate-x-1/2">
+            <ErrorMessage message="Harap diisi semuanya" />
+          </div>
+        </div>
+      )
+      }
 
-      {errorRequest && <ErrorMessage message="Gagal membuat RSVP!" />}
+      {errorRequest && (
+        <div className="absolute left-0 right-0 z-10">
+          <div className="p-12 m-12 absolute translate-x-1/2">
+            < ErrorMessage message="Gagal membuat RSVP!" />
+          </div>
+        </div>
+      )
+      }
 
       <div data-aos="zoom-in"
         data-aos-offset="10"
@@ -97,34 +118,15 @@ const FormRsvp = () => {
           <label htmlFor="kehadiran">Kehadiran:</label>
 
           {/* dropdown */}
-          {/* <div className="flex justify-between">
-            <label className="w-1/2 bg-slate-300">
+          <div className="flex justify-between">
+            <label className="w-1/2 bg-[#D9D9D9] mx-1 rounded-full p-2 flex items-center">
               <input onChange={(e) => handleForm(e, 'presence')} type="radio" name="kehadiran" value="Hadir" checked={form.presence === 'Hadir'} />
               Hadir
             </label>
-            <label>
+            <label className="w-1/2 bg-[#D9D9D9] mx-1 rounded-full p-2 flex items-center">
               <input onChange={(e) => handleForm(e, 'presence')} type="radio" name="kehadiran" value="Tidak Hadir" checked={form.presence === 'Tidak Hadir'} />
               Tidak Hadir
             </label>
-          </div> */}
-
-          <div className="flex justify-between">
-            <div class="flex items-center w-1/2 rounded border border-gray-200 dark:border-gray-700 mr-1">
-              <div className="p-2">
-                <input
-                  onChange={(e) => handleForm(e, 'presence')} checked={form.presence === 'Hadir'}
-                  id="bordered-radio-1" type="radio" value="Hadir" name="bordered-radio" class="w-4 h-4 text-black bg-gray-100 border-gray-300 focus:ring-black dark:focus:ring-black dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-                <label for="bordered-radio-1" class="pl-1 py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300">Hadir</label>
-              </div>
-            </div>
-            <div class="flex items-center w-1/2 rounded border border-gray-200 dark:border-gray-700">
-              <div className="p-2">
-                <input
-                  onChange={(e) => handleForm(e, 'presence')} value="Tidak Hadir" checked={form.presence === 'Tidak Hadir'}
-                  id="bordered-radio-1" type="radio" name="bordered-radio" class="w-4 h-4 text-black bg-gray-100 border-gray-300 focus:ring-black dark:focus:ring-black dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-                <label for="bordered-radio-1" class="pl-1 py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300">Tidak Hadir</label>
-              </div>
-            </div>
           </div>
 
           {/* dropdown */}
