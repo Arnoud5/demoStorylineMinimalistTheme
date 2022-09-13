@@ -68,7 +68,7 @@ const FormRsvp = () => {
   }, [errorFormHandle, errorRequest])
 
   return (
-    <div className="flex flex-col font-madeCanvas text-base relative items-center justify-center" id="rsvp">
+    <div className="flex flex-col font-madeCanvas text-base" id="rsvp">
       { loader && <LoaderRing />}
 
       { errorFormHandle && <ErrorMessage message="Harap diisi semuanya" /> }

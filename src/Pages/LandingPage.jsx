@@ -48,7 +48,7 @@ const LandingPage = () => {
                     volume={0.5}
                 />
               )}
-              <div className="h-fit bg-[#EBEDE0]" >
+              <div className="h-fit bg-[#EBEDE0] overflow-hidden" >
                 <div className="landing-page">
                   <NavbarTop />
                   <WeddingOf />
