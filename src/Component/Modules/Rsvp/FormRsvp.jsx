@@ -94,11 +94,11 @@ const FormRsvp = () => {
           {/* dropdown */}
           <div className="flex justify-between">
             <label className="w-1/2 bg-slate-300">
-                <input onChange={(e) => handleForm(e, 'presence')} type="radio" name="kehadiran" value="Hadir" />
+                <input onChange={(e) => handleForm(e, 'presence')} type="radio" name="kehadiran" value="Hadir" checked={form.presence === 'Hadir'}/>
                 Hadir
             </label>
             <label>
-                <input onChange={(e) => handleForm(e, 'presence')} type="radio" name="kehadiran" value="Tidak Hadir" />
+                <input onChange={(e) => handleForm(e, 'presence')} type="radio" name="kehadiran" value="Tidak Hadir" checked={form.presence === 'Tidak Hadir'}/>
                 Tidak Hadir
             </label>
           </div>
