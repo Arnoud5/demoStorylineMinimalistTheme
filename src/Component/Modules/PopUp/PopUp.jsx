@@ -46,9 +46,11 @@ const PopUp = ({ setOpenmsg }) => {
                         Kepada YTH:<br />
                         <span className="underline underline-offset-4">
                             {
-                                name
+                                name && (name)
                             }
-
+                            {
+                                !name && ("Bapak/Ibu")
+                            }
                         </span><br />
                         (DITEMPAT)
                     </h2>

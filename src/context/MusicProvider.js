@@ -4,7 +4,7 @@ const MusicContext = createContext({});
 
 export const MusicProvider = ({ children }) => {
     const [playMusic, setPlayMusic] = useState(true);
-    const [name, setName] = useState("Bapak/Ibu");
+    const [name, setName] = useState("");
     return (
         <MusicContext.Provider
             value={{
