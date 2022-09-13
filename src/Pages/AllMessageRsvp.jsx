@@ -8,15 +8,15 @@ const AllMessage = () => {
 
   const [messages, setMessages] = useState(null)
 
-    useEffect(() => {
-      (async() => {
-        const url = 'http://whatsapp.storylinesmile.tech/api/rsvp';
-        const result = await axios.get(url)
+  useEffect(() => {
+    (async () => {
+      const url = 'http://whatsapp.storylinesmile.tech/api/rsvp';
+      const result = await axios.get(url)
 
-        setMessages(result?.data?.messages);
-      })()
-    }, [])
-
+      setMessages(result?.data?.messages);
+    })()
+  }, [])
+  
   const handleBack = () => navigate('/')
 
   return (
@@ -26,17 +26,17 @@ const AllMessage = () => {
         <p>Kembali</p>
       </button>
 
-      { messages && (
+      {messages && (
         <div className="flex flex-col gap-y-5 mt-7 overflow-y-scroll h-screen pb-20">
-          { messages?.map(message => (
-            <div className="w-10/12 mx-auto bg-[#D9D9D9] rounded-xl p-3 h-fit ">
+          {messages?.map(message => (
+            <div key={message?._id} index={message?._id} className="w-10/12 mx-auto bg-[#D9D9D9] rounded-xl p-3 h-fit ">
               <div className="flex justify-start py-1">
                 <p className="font-bold">{message?.from}</p>
                 <p className="ml-1">{message?.presence}</p>
               </div>
               <p className="truncate h-16">{message?.message}</p>
             </div>
-          )) }
+          ))}
         </div>
       )}
     </div>

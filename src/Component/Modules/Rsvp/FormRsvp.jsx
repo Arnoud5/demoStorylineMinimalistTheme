@@ -71,7 +71,7 @@ const FormRsvp = () => {
     }
 
   }, [errorFormHandle, errorRequest])
-  console.log(form)
+  
   return (
     <div className="relative flex flex-col font-madeCanvas text-base" id="rsvp">
       {loader && (
