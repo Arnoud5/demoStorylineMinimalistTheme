@@ -36,39 +36,31 @@ const LandingPage = () => {
     }
     return (
         <div className="max-w-md mx-auto relative">
-            {
-                openMsg && (
-                    <PopUp setOpenmsg={setOpenMsg} />
-                )
-            }
-
-            {
-                !openMsg && (
-                    <>
-                        {
-                            playMusic && (
-                                <ReactAudioPlayer
-                                    src={Hapiness}
-                                    autoPlay={true}
-                                    volume={0.5}
-                                />
-                            )
-                        }
-                        <div className="h-fit bg-[#EBEDE0]" >
-                            <div className="landing-page">
-                                <NavbarTop />
-                                <WeddingOf />
-                                <Doa />
-                                <SaveTheDate />
-                                <Rsvp />
-                                <Gift />
-                            </div>
-                        </div>
-                        <NavbarBottom />
-                    </>
-                )
-            }
-
+          { openMsg && (
+              <PopUp setOpenmsg={setOpenMsg} />
+          )}
+          {!openMsg && (
+            <>
+              { playMusic && (
+                <ReactAudioPlayer
+                    src={Hapiness}
+                    autoPlay={true}
+                    volume={0.5}
+                />
+              )}
+              <div className="h-fit bg-[#EBEDE0]" >
+                <div className="landing-page">
+                  <NavbarTop />
+                  <WeddingOf />
+                  <Doa />
+                  <SaveTheDate />
+                  <Rsvp />
+                  <Gift />
+                </div>
+              </div>
+              <NavbarBottom />
+            </>
+          )}
         </div>
     )
 }

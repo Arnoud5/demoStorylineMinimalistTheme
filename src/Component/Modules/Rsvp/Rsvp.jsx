@@ -9,6 +9,7 @@ import Img3 from "./Assets/Img3.jpg"
 import Img4 from "./Assets/Img4.jpg"
 import Img5 from "./Assets/Img5.jpg"
 import Img6 from "./Assets/Img6.jpg"
+import FormRsvp from "./FormRsvp";
 
 const Rsvp = () => {
     const images = [
@@ -41,49 +42,8 @@ const Rsvp = () => {
                 </h2>
             </div>
 
-            <div className="flex flex-col font-madeCanvas text-base" id="rsvp">
-                <div data-aos="zoom-in"
-                    data-aos-offset="10"
-                    data-aos-easing="ease-in-out"
-                    data-aos-delay="300"
-                >
-                    <div className="flex flex-col w-10/12 mx-auto">
-                        <label htmlFor="kepada">Kepada:</label>
-                        <input className="border-none focus:outline-none focus:ring focus:ring-[#AFABAB] focus:text-[#858282] active:text-[#AFABAB] bg-[#D9D9D9] text-[#AFABAB] rounded-full px-3 font-semibold"
-                            id="kepada" type="text" placeholder="&#x2022; &#x2022; &#x2022; &#x2022;"
-                        />
-                        <label htmlFor="ucapan">Ucapan:</label>
-                        <textarea className="border-none h-24 focus:outline-none focus:ring focus:ring-[#AFABAB] focus:text-[#858282] active:text-[#AFABAB] bg-[#D9D9D9] text-[#AFABAB] rounded-xl px-3 font-semibold"
-                            id="ucapan" cols="50" placeholder="&#x2022; &#x2022; &#x2022; &#x2022;"
-                        />
-                        <label htmlFor="kehadiran">Kehadiran:</label>
+            <FormRsvp />
 
-                        {/* dropdown */}
-                        <div className="flex justify-between">
-                            <label className="w-1/2 bg-slate-300">
-                                <input type="radio" name="kehadiran" value="Hadir" />
-                                Hadir
-                            </label>
-                            <label>
-                                <input type="radio" name="kehadiran" value="Tidak Hadir" />
-                                Tidak Hadir
-                            </label>
-                        </div>
-
-                        {/* dropdown */}
-
-
-                        {/* <input className="focus:outline-none focus:ring focus:ring-[#AFABAB] focus:text-[#858282] active:text-[#AFABAB] bg-[#D9D9D9] text-[#EBEDE0] rounded-full px-3 font-semibold"
-                            id="kehadiran" type="text" placeholder="&#x2022; &#x2022; &#x2022; &#x2022;"
-                        /> */}
-                    </div>
-                    <div className="w-10/12 mx-auto py-3">
-                        <button className="block bg-[#AFABAB] px-6 py-1 rounded-full text-white">
-                            Kirim
-                        </button>
-                    </div>
-                </div>
-            </div>
             <div className="w-full pt-2 pb-8"
                 data-aos="zoom-in"
                 data-aos-offset="300"
