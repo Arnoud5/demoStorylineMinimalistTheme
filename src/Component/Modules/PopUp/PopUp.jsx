@@ -3,10 +3,13 @@ import LeafBG from "./pngwing.png"
 import TextBG from "./textBG.svg"
 
 import { Link } from "react-scroll";
+import { useContext } from "react";
+import MusicContext from "../../../context/MusicProvider";
 
-const PopUp = ({setOpenmsg}) => {
+const PopUp = ({ setOpenmsg }) => {
+    const { name } = useContext(MusicContext)
 
-    const handleOpenMessage= () => {
+    const handleOpenMessage = () => {
         return setOpenmsg(false)
     }
 
@@ -21,7 +24,7 @@ const PopUp = ({setOpenmsg}) => {
                         backgroundSize: "contain",
                         backgroundRepeat: "no-repeat",
                         backgroundPosition: "left center",
-                        height: "30vh",
+                        height: "40vh",
                     }}>
                 </div>
                 <div className="w-full"
@@ -30,7 +33,7 @@ const PopUp = ({setOpenmsg}) => {
                         backgroundSize: "contain",
                         backgroundRepeat: "no-repeat",
                         backgroundPosition: "right top",
-                        height: "70vh",
+                        height: "60vh",
                     }}>
                 </div>
             </div>
@@ -41,13 +44,23 @@ const PopUp = ({setOpenmsg}) => {
                     </h1>
                     <h2 className="text-[20px] my-2 leading-7 font-medium">
                         Kepada YTH:<br />
-                        <span className="underline underline-offset-4">OLIVER</span><br />
+                        <span className="underline underline-offset-4">
+                            {
+                                name
+                            }
+
+                        </span><br />
                         (DITEMPAT)
                     </h2>
                     <Link to="weddingof" offset={-60} smooth={true} spy={true}>
                         <button
                             onClick={handleOpenMessage}
-                            className="button-buka-undangan text-[12px] font-black px-3 py-1 text-white rounded-full bg-[#AFABAB]">BUKA UNDANGAN</button>
+                            className="button-buka-undangan 
+                            hover:bg-[#cac9c9] active:bg-[#D9D9D9] focus:outline-none focus:ring hover:ring 
+                            focus:ring-[#D9D9D9] hover:ring-[#D9D9D9]
+                            text-[12px] font-black px-3 py-1 text-white rounded-full bg-[#AFABAB]">
+                            BUKA UNDANGAN
+                        </button>
                     </Link>
                 </div>
             </div>

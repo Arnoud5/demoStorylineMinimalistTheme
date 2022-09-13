@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState, useContext } from "react";
+import MusicContext from "../context/MusicProvider";
 // aos motion library
 import Aos from "aos";
 import "aos/dist/aos.css"
@@ -10,22 +11,29 @@ import SaveTheDate from "../Component/Modules/SaveTheDate";
 import Gift from "../Component/Modules/Gift";
 import Doa from "../Component/Modules/Doa";
 import NavbarBottom from "../Component/common/NavbarBottom/NavbarBottom";
-import Galery from "../Component/Modules/Galery/Galery";
 import Rsvp from "../Component/Modules/Rsvp/Rsvp";
 // import MusicComponent from "../Component/common/Music";
 import ReactAudioPlayer from "react-audio-player";
 
 import Hapiness from "./hapiness.mp3"
-import { useState } from "react";
+import { useParams } from "react-router-dom";
 
 const LandingPage = () => {
-    const [openMsg, setOpenMsg] = useState(true)
+    const { name } = useParams();
+
+    const [openMsg, setOpenMsg] = useState(true);
+
+    const { playMusic, setName } = useContext(MusicContext)
 
     useEffect(() => {
         Aos.init();
         Aos.refresh();
+        putNameContext(name)
     }, [])
 
+    const putNameContext = (text) => {
+        setName(text);
+    }
     return (
         <div className="max-w-md mx-auto relative">
             {
@@ -33,13 +41,19 @@ const LandingPage = () => {
                     <PopUp setOpenmsg={setOpenMsg} />
                 )
             }
+
             {
                 !openMsg && (
                     <>
-                        <ReactAudioPlayer
-                            src={Hapiness}
-                            autoPlay={true}
-                        />
+                        {
+                            playMusic && (
+                                <ReactAudioPlayer
+                                    src={Hapiness}
+                                    autoPlay={true}
+                                    volume={0.5}
+                                />
+                            )
+                        }
                         <div className="h-fit bg-[#EBEDE0]" >
                             <div className="landing-page">
                                 <NavbarTop />
@@ -47,7 +61,6 @@ const LandingPage = () => {
                                 <Doa />
                                 <SaveTheDate />
                                 <Rsvp />
-                                <Galery />
                                 <Gift />
                             </div>
                         </div>

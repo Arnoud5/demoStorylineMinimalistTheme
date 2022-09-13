@@ -7,6 +7,8 @@
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
     "aos": "^2.3.4",
+    "flowbite": "^1.5.3",
+    "flowbite-react": "^0.1.10",
     "pure-react-carousel": "^1.29.0",
     "react": "^18.2.0",
     "react-audio-player": "^0.17.0",

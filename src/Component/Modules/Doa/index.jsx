@@ -19,13 +19,12 @@ const Doa = () => {
                 backgroundPosition: "center "
             }}
         >
-            <div className="pt-10 pb-16"
-                id="doa"
-            >
+            <div className="pt-6 pb-16" id="doa">
                 <div className="mx-5 py-3"
                     data-aos="fade-down"
-                    data-aos-offset="300"
+                    data-aos-offset="200"
                     data-aos-easing="ease-in-out"
+                    data-aos-delay="50"
                 >
                     <h2 className="text-xl text-center font-bold mb-4">
                         بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</h2>
@@ -37,8 +36,9 @@ const Doa = () => {
                     {/* Anggi */}
                     <div className="relative"
                         data-aos="fade-up"
-                        data-aos-offset="300"
+                        data-aos-offset="400"
                         data-aos-easing="ease-in-out"
+                        data-aos-delay="50"
                     >
                         <img className="-rotate-6 -ml-3" src={fotoAnggi} alt="Foto Mempelai Wanita Anggi Rafika" />
                         <div className="absolute left-2 -bottom-5">
@@ -55,8 +55,9 @@ const Doa = () => {
                     {/* Yudha */}
                     <div className="relative flex justify-end pt-10"
                         data-aos="fade-up"
-                        data-aos-offset="300"
+                        data-aos-offset="400"
                         data-aos-easing="ease-in-out"
+                        data-aos-delay="50"
                     >
                         <img className="-mr-3 rotate-6" src={fotoYudha} alt="Foto mempelai pria Yudha Prabowo" />
                         <div className="absolute -bottom-5 right-2">

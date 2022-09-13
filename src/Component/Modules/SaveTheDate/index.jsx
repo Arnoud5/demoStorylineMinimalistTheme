@@ -11,7 +11,7 @@ const SaveTheDate = () => {
         <div className="w-full h-fit bg-[#EBEDE0]"
             id="savethedate"
         >
-            <div className="py-10">
+            <div className="py-2 pb-8">
                 <h2 className="text-3xl font-madeCanvas text-center"
                     data-aos="fade-down"
                     data-aos-offset="200"
@@ -64,7 +64,15 @@ const SaveTheDate = () => {
                         </table>
                     </div>
                     <div className="flex justify-center my-2">
-                        <button className="px-2 py-1 rounded-full bg-[#D9D9D9] font-madeCanvas text-base font-medium">Lihat Peta</button>
+                        <a className="
+                            px-2 py-1 rounded-full bg-[#D9D9D9] font-madeCanvas text-base font-medium 
+                            hover:bg-[#cac9c9] active:bg-[#D9D9D9] focus:outline-none focus:ring hover:ring 
+                            focus:ring-[#D9D9D9] hover:ring-[#D9D9D9]"
+                            target="_blank"
+                            rel="noreferrer"
+                            href="https://maps.app.goo.gl/9JXR8FuHzqQNCUGD6">
+                            Lihat Peta
+                        </a>
                     </div>
                 </div>
 
@@ -106,7 +114,15 @@ const SaveTheDate = () => {
                         </table>
                     </div>
                     <div className="flex justify-center my-2">
-                        <button className="px-2 py-1 rounded-full bg-[#D9D9D9] font-madeCanvas text-base font-medium">Lihat Peta</button>
+                        <a className="
+                            px-2 py-1 rounded-full bg-[#D9D9D9] font-madeCanvas text-base font-medium 
+                            hover:bg-[#cac9c9] active:bg-[#D9D9D9] focus:outline-none focus:ring hover:ring 
+                            focus:ring-[#D9D9D9] hover:ring-[#D9D9D9]"
+                            target="_blank"
+                            rel="noreferrer"
+                            href="https://maps.app.goo.gl/yArkf2BkwVGKtQnF6">
+                            Lihat Peta
+                        </a>
                     </div>
                 </div>
 
