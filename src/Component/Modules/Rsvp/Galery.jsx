@@ -3,12 +3,12 @@ import { CarouselProvider, Slider, Slide } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 
 
-import Img1 from "./Assets/Img1.jpg"
-import Img2 from "./Assets/Img2.jpg"
-import Img3 from "./Assets/Img3.jpg"
-import Img4 from "./Assets/Img4.jpg"
-import Img5 from "./Assets/Img5.jpg"
-import Img6 from "./Assets/Img6.jpg"
+import Img1 from "./Assets/Img1.jpeg"
+import Img2 from "./Assets/Img2.jpeg"
+import Img3 from "./Assets/Img3.jpeg"
+import Img4 from "./Assets/Img4.jpeg"
+import Img5 from "./Assets/Img5.jpeg"
+import Img6 from "./Assets/Img6.jpeg"
 
 const Galery = () => {
   const images = [

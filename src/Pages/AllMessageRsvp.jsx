@@ -10,13 +10,13 @@ const AllMessage = () => {
 
   useEffect(() => {
     (async () => {
-      const url = 'http://whatsapp.storylinesmile.tech/api/rsvp';
+      const url = 'https://whatsapp.storylinesmile.tech/api/rsvp';
       const result = await axios.get(url)
 
       setMessages(result?.data?.messages);
     })()
   }, [])
-  
+
   const handleBack = () => navigate('/')
 
   return (
@@ -32,9 +32,15 @@ const AllMessage = () => {
             <div key={message?._id} index={message?._id} className="w-10/12 mx-auto bg-[#D9D9D9] rounded-xl p-3 h-fit ">
               <div className="flex justify-start py-1">
                 <p className="font-bold">{message?.from}</p>
-                <p className="ml-1">{message?.presence}</p>
+                <p className="ml-1"><i>
+                  {
+                    message?.presence !== " " && (
+                      `(${message?.presence})`
+                    )
+                  }
+                </i></p>
               </div>
-              <p className="truncate h-16">{message?.message}</p>
+              <p className="h-fit">{message?.message}</p>
             </div>
           ))}
         </div>

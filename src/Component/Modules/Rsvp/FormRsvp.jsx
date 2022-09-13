@@ -2,15 +2,13 @@ import React, { useEffect, useState } from "react"
 import axios from "axios"
 import LoaderRing from "../../common/Loaders/Ring/index"
 import ErrorMessage from './ErrorMessage'
-import { useNavigate } from "react-router-dom"
 
 const FormRsvp = () => {
-  const navigate = useNavigate()
 
   const [form, setForm] = useState({
     from: '',
     message: '',
-    presence: ''
+    presence: ' '
   })
 
   const [loader, setLoader] = useState(false)
@@ -27,17 +25,17 @@ const FormRsvp = () => {
   // handle submit rsvp
   const handleSubmit = async () => {
     try {
-      if (form.from === '' || form.message === '' || form.presence === '') {
+      if (form.from === '' || form.message === '') {
         return setErrorFormHandle(true)
       }
 
       if (!errorFormHandle) {
         setLoader(true)
-        const url = 'http://whatsapp.storylinesmile.tech/api/rsvp';
+        const url = 'https://whatsapp.storylinesmile.tech/api/rsvp';
         const result = await axios.post(url, form);
         console.log('result', result)
 
-        navigate(0)
+        // navigate(0)
       }
     } catch (error) {
       setErrorRequest(true)
@@ -71,7 +69,7 @@ const FormRsvp = () => {
     }
 
   }, [errorFormHandle, errorRequest])
-  
+
   return (
     <div className="relative flex flex-col font-madeCanvas text-base" id="rsvp">
       {loader && (
@@ -86,7 +84,7 @@ const FormRsvp = () => {
       {errorFormHandle && (
         <div className="absolute left-0 right-0 z-10">
           <div className="p-12 m-12 absolute translate-x-1/2">
-            <ErrorMessage message="Harap diisi semuanya" />
+            <ErrorMessage message="Harap mengisi nama dan ucapan" />
           </div>
         </div>
       )
@@ -107,25 +105,23 @@ const FormRsvp = () => {
         data-aos-delay="300"
       >
         <form className="flex flex-col w-10/12 mx-auto">
-          <label htmlFor="kepada">Kepada:</label>
-          <input onChange={(e) => handleForm(e, 'from')} value={form.from} className="border-none focus:outline-none focus:ring focus:ring-[#AFABAB] focus:text-[#858282] active:text-[#AFABAB] bg-[#D9D9D9] text-[#AFABAB] rounded-full px-3 font-semibold"
+          <label htmlFor="kepada" className="mb-1">Nama:</label>
+          <input onChange={(e) => handleForm(e, 'from')} value={form.from} className="mb-3 border-none focus:outline-none focus:ring focus:ring-[#AFABAB] focus:text-[#858282] active:text-[#AFABAB] bg-[#D9D9D9] text-[#AFABAB] rounded-full px-3 font-semibold"
             id="kepada" type="text" placeholder="&#x2022; &#x2022; &#x2022; &#x2022;"
           />
-          <label htmlFor="ucapan">Ucapan:</label>
-          <textarea onChange={(e) => handleForm(e, 'message')} value={form.message} className="border-none h-24 focus:outline-none focus:ring focus:ring-[#AFABAB] focus:text-[#858282] active:text-[#AFABAB] bg-[#D9D9D9] text-[#AFABAB] rounded-xl px-3 font-semibold"
+          <label htmlFor="ucapan" className="mb-1">Ucapan:</label>
+          <textarea onChange={(e) => handleForm(e, 'message')} value={form.message} className="mb-3 border-none h-24 focus:outline-none focus:ring focus:ring-[#AFABAB] focus:text-[#858282] active:text-[#AFABAB] bg-[#D9D9D9] text-[#AFABAB] rounded-xl px-3 font-semibold"
             id="ucapan" cols="50" placeholder="&#x2022; &#x2022; &#x2022; &#x2022;"
           />
-          <label htmlFor="kehadiran">Kehadiran:</label>
+          <label htmlFor="kehadiran" className="mb-1">Kehadiran:</label>
 
           {/* dropdown */}
-          <div className="flex justify-between">
-            <label className="w-1/2 bg-[#D9D9D9] mx-1 rounded-full p-2 flex items-center">
-              <input onChange={(e) => handleForm(e, 'presence')} type="radio" name="kehadiran" value="Hadir" checked={form.presence === 'Hadir'} />
+
+          <div class="flex items-center mb-4 bg-[#D9D9D9] p-3 rounded-xl">
+            <input onChange={(e) => handleForm(e, 'presence')}
+              id="default-checkbox" type="checkbox" value="hadir" class="w-4 h-4 text-black bg-gray-100 rounded border-gray-300 focus:ring-black dark:focus:ring-black dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+            <label for="default-checkbox" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">
               Hadir
-            </label>
-            <label className="w-1/2 bg-[#D9D9D9] mx-1 rounded-full p-2 flex items-center">
-              <input onChange={(e) => handleForm(e, 'presence')} type="radio" name="kehadiran" value="Tidak Hadir" checked={form.presence === 'Tidak Hadir'} />
-              Tidak Hadir
             </label>
           </div>
 

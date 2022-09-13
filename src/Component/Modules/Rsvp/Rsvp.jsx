@@ -11,7 +11,7 @@ const Rsvp = () => {
 
     useEffect(() => {
       (async() => {
-        const url = 'http://whatsapp.storylinesmile.tech/api/rsvp';
+        const url = 'https://whatsapp.storylinesmile.tech/api/rsvp';
         const result = await axios.get(url)
 
         setMessages(result?.data?.messages);

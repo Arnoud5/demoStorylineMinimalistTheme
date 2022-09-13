@@ -31,13 +31,9 @@ const Gift = () => {
                     Do’a restu anda merupakan karunia yang sangat berarti bagi kami. Tanpa mengurangi rasa hormat, dan untuk melengkapi kebahagiaan pengantin anda dapat memberi tanda kasih disini :
                 </p>
                 {/* BCA */}
-                
+
                 <div className="rounded-xl w-11/12 xxs:w-2/3 mx-auto h-28 shadow-md m-8"
                     style={{ background: "linear-gradient(179.5deg, #FFFFFF 0.43%, #969696 123.38%)" }}
-                    data-aos="flip-left"
-                    data-aos-offset="1000"
-                    data-aos-easing="ease-in-out"
-                    data-aos-delay="300"
                 >
                     <div className="m-4 flex flex-col font-magesta text-base">
                         <img className="w-16 xss:w-24 h-auto self-end" src={LogoBca} alt="logo BCA" />
