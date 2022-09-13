@@ -54,7 +54,7 @@ const SaveTheDate = () => {
                                 <tr>
                                     <td></td>
                                     <td>Resepsi</td>
-                                    <td>: 09:00 WIB</td>
+                                    <td>: 10:00 WIB</td>
                                 </tr>
                                 <tr>
                                     <td><img src={Location} className="w-3 flex justify-center items-center" alt="location icon" /></td>
@@ -95,7 +95,7 @@ const SaveTheDate = () => {
                     </div>
                     <div className="flex flex-col text-center">
                         <p className="font-creattionDemo text-3xl leading-loose">Tanggal</p>
-                        <p className="font-magesta text-4xl">22.09.22</p>
+                        <p className="font-magesta text-4xl">25.09.22</p>
                     </div>
                     <div className="flex justify-center font-madeCanvas">
                         <table>
