@@ -2,8 +2,11 @@ import React, { useEffect, useState } from "react"
 import axios from "axios"
 import LoaderRing from "../../common/Loaders/Ring/index"
 import ErrorMessage from './ErrorMessage'
+import { useNavigate } from "react-router-dom"
 
 const FormRsvp = () => {
+  const navigate = useNavigate()
+
   const [form, setForm] = useState({
     from: '',
     message: '',
@@ -33,6 +36,8 @@ const FormRsvp = () => {
         const url = 'http://whatsapp.storylinesmile.tech/api/rsvp';
         const result = await axios.post(url, form);
         console.log('result', result)
+
+        navigate(0)
       }
     } catch (error) {
       setErrorRequest(true)

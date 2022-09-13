@@ -7,7 +7,7 @@ import Galery from "./Galery";
 import MessageRsvp from "./messageRsvp";
 
 const Rsvp = () => {
-  const [messages, setMessages] = useState(null)
+    const [messages, setMessages] = useState(null)
 
     useEffect(() => {
       (async() => {
