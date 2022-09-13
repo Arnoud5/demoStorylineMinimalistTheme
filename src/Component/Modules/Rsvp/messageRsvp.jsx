@@ -4,9 +4,13 @@ import 'pure-react-carousel/dist/react-carousel.es.css';
 import { useNavigate } from 'react-router-dom';
 
 const MessageRsvp = ({ messages }) => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  const handleAllMessage = () => navigate('/messages')
+  // const handleAllMessage = () => navigate('/messages')
+
+  const handleAllMessage = () => {
+
+  }
 
   return (
     <>

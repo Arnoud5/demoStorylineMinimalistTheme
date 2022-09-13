@@ -33,7 +33,7 @@ const FormRsvp = () => {
         setLoader(true)
         const url = 'https://whatsapp.storylinesmile.tech/api/rsvp';
         const result = await axios.post(url, form);
-        console.log('result', result)
+        // console.log('result', result)
 
         // navigate(0)
       }
