@@ -4,17 +4,11 @@ import { Link } from "react-scroll";
 import { useContext } from "react";
 import MusicContext from "../../../context/MusicProvider";
 
-
-// import MusicWedding from "./song-happiness.ogg"
-// import ReactAudioPlayer from 'react-audio-player'
-
-
 const NavbarBottom = () => {
 
     const { playMusic, setPlayMusic } = useContext(MusicContext)
 
     const play = () => {
-
         if (playMusic) {
             return setPlayMusic(false);
         } else {
@@ -23,10 +17,6 @@ const NavbarBottom = () => {
     }
     return (
         <div className="bg-black flex max-w-md w-full fixed  bottom-0 p-2 justify-evenly items-center z-10">
-            {/* <ReactAudioPlayer
-                src={MusicWedding}
-                autoPlay
-            /> */}
             <Link activeClass="active" to="weddingof" offset={-85} smooth={true} spy={true}>
                 <Icon className="w-7 h-auto" icon="ant-design:home-filled" color="white" />
             </Link>
@@ -49,7 +39,6 @@ const NavbarBottom = () => {
                     )
                     :
                     (
-                        // <Icon className="w-7 h-auto" onClick={play} icon="akar-icons:music-note" color="white" />
                         <Icon className="w-7 h-auto" onClick={play} icon="fluent:music-note-off-1-20-filled" color="white" />
                     )
 

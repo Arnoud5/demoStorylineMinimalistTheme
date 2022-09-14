@@ -4,13 +4,9 @@ import 'pure-react-carousel/dist/react-carousel.es.css';
 import { useNavigate } from 'react-router-dom';
 
 const MessageRsvp = ({ messages }) => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
-  // const handleAllMessage = () => navigate('/messages')
-
-  const handleAllMessage = () => {
-
-  }
+  const handleAllMessage = () => navigate('/messages')
 
   return (
     <>
@@ -28,13 +24,13 @@ const MessageRsvp = ({ messages }) => {
           </div>
           <CarouselProvider
             naturalSlideWidth={50}
-            naturalSlideHeight={20}
+            naturalSlideHeight={23}
             totalSlides={messages?.length}
           >
             <Slider>
               {messages?.map((message) => (
                 <Slide key={message?._id} index={message?._id}>
-                  <div className="w-10/12 mx-auto bg-[#D9D9D9] rounded-xl p-3 h-fit ">
+                  <div className="w-10/12 mx-auto bg-[#D9D9D9] rounded-xl p-3 min-h-[130px] ">
                     <div className="flex justify-start py-1">
                       <p className="font-bold">{message?.from}</p>
                       <p className="ml-1"><i>
@@ -45,7 +41,7 @@ const MessageRsvp = ({ messages }) => {
                         }
                       </i></p>
                     </div>
-                    <p className="line-clamp-4 h-fit">{message?.message}</p>
+                    <p className="line-clamp-3 h-fit">{message?.message}</p>
                   </div>
                 </Slide>
               ))}

@@ -32,22 +32,22 @@ const Gift = () => {
                 </p>
                 {/* BCA */}
 
-                <div className="rounded-xl w-11/12 xxs:w-2/3 mx-auto h-28 shadow-md m-8"
+                <div className="rounded-xl w-11/12 xxs:w-11/12 h-fit mx-auto shadow-md m-8"
                     style={{ background: "linear-gradient(179.5deg, #FFFFFF 0.43%, #969696 123.38%)" }}
                 >
-                    <div className="m-4 flex flex-col font-magesta text-base">
+                    <div className="m-4 flex flex-col font-magesta text-base p-4">
                         <img className="w-16 xss:w-24 h-auto self-end" src={LogoBca} alt="logo BCA" />
-                        <div className="flex justify-start items-center">
-                            <p>
+                        <div className="text-base flex justify-start items-center">
+                            <p className="text-xs xxs:text-base">
                                 2521389658
                             </p>
                             <button onClick={copyREK}
-                                className="pt-2 p-1 ml-2 text-[#0038FF] active:bg-black focus:bg-black active:text-white focus:text-white select-none rounded-xl
+                                className="pt-2 p-1 ml-2 text-[#0038FF] active:bg-black focus:bg-black active:text-white focus:text-white select-none rounded-xl text-xs xxs:text-base
                             ">
                                 ( Copy )
                             </button>
                         </div>
-                        <p className="self-start">a.n : Yudha Prabowo</p>
+                        <p className="self-start text-xs xxs:text-base">a.n : Yudha Prabowo</p>
                     </div>
                 </div>
                 {/* BCA */}
