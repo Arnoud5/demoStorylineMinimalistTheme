@@ -1,13 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 
 import LogoBca from "./logo-bca.png"
 import BgGift from "./bggift.png"
+import { useEffect } from "react";
+import ErrorMessage from "../Rsvp/ErrorMessage";
 
 const Gift = () => {
+
+    // const [copy,setCopy] = useState(false)
+    const [loader, setLoader] = useState(false)
 
     const copyREK = () => {
         navigator.clipboard.writeText(2521389658)
     }
+    const handleCard = () => {
+        setLoader(true)
+    }
+
+    useEffect(() => {
+        if (loader) {
+            setTimeout(() => {
+                setLoader(false)
+            }, 2000)
+        }
+    }, [loader])
 
     return (
         <div className="h-auto bg-[#EBEDE0] pt-5 pb-4"
@@ -19,6 +35,7 @@ const Gift = () => {
                 backgroundPosition: "center "
             }}
         >
+
             <div className="h-fit mb-12 py-4 px-5 w-11/12 mx-auto bg-[#D9D9D9] text-center rounded-xl font-madeCanvas"
                 style={{ backgroundColor: "rgba(217, 217, 217, 0.7)" }}
                 data-aos="zoom-in-down"
@@ -32,7 +49,16 @@ const Gift = () => {
                 </p>
                 {/* BCA */}
 
-                <div className="rounded-xl w-11/12 xxs:w-11/12 h-fit mx-auto shadow-md m-8"
+                {
+                    loader && (
+                        <div className="absolute left-0 right-0 z-10">
+                            <div className="p-12 m-12 absolute translate-x-1/2">
+                                <ErrorMessage message="nomor rekening sudah tercopy" />
+                            </div>
+                        </div>
+                    )
+                }
+                <div onClick={handleCard} className="rounded-xl w-11/12 xxs:w-11/12 h-fit mx-auto shadow-md m-8"
                     style={{ background: "linear-gradient(179.5deg, #FFFFFF 0.43%, #969696 123.38%)" }}
                 >
                     <div className="m-4 flex flex-col font-magesta text-base p-4">
