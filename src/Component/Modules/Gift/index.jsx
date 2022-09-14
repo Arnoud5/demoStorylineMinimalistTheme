@@ -6,8 +6,6 @@ import { useEffect } from "react";
 import ErrorMessage from "../Rsvp/ErrorMessage";
 
 const Gift = () => {
-
-    // const [copy,setCopy] = useState(false)
     const [loader, setLoader] = useState(false)
 
     const copyREK = () => {
@@ -19,6 +17,7 @@ const Gift = () => {
 
     useEffect(() => {
         if (loader) {
+            copyREK()
             setTimeout(() => {
                 setLoader(false)
             }, 2000)
@@ -67,7 +66,7 @@ const Gift = () => {
                             <p className="text-xs xxs:text-base">
                                 2521389658
                             </p>
-                            <button onClick={copyREK}
+                            <button 
                                 className="pt-2 p-1 ml-2 text-[#0038FF] active:bg-black focus:bg-black active:text-white focus:text-white select-none rounded-xl text-xs xxs:text-base
                             ">
                                 ( Copy )
